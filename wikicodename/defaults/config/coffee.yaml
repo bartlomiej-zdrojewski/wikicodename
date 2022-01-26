@@ -1,0 +1,9 @@
+profile:
+    validation_pattern: "^[a-zA-Z0-9][a-zA-Z0-9 ]+[a-zA-Z0-9]"
+
+pages:
+    - "List_of_coffee_varieties"
+
+sources:
+    tables:
+        - "Name"

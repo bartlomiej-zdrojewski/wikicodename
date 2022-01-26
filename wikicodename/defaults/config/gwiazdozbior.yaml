@@ -1,0 +1,19 @@
+# This is a configuration file for a non-English list of code names.
+
+# Note the overridden Wikipedia URL.
+wikipedia_url: "https://pl.wikipedia.org/"
+
+profile:
+    transform_unidecode: true
+    validation_pattern: "^[a-zA-Z][a-zA-Z ]+[a-zA-Z]"
+
+pages:
+    - "Gwiazdozbiory_według_nazw_łacińskich"
+
+# Note the overridden list of excluded sections.
+excluded_sections:
+    - "Zobacz też"
+
+sources:
+    tables:
+        - "Nazwa polska"

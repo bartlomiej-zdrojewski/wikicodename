@@ -1,0 +1,78 @@
+# This is the main configuration file. Use it to define the default parameters
+# and the profiles that merge or transform a list of code names.
+
+# The default Wikipedia URL. May be overridden in other configuration files.
+# [string, required]
+wikipedia_url: "https://en.wikipedia.org/"
+
+# The list of excluded sections. May be overridden in other configuration files.
+# [list<string>, optional]
+excluded_sections:
+    - ""
+    - "Notes"
+    - "See also"
+    - "References"
+    - "Further reading"
+    - "External links"
+
+#
+# The list of code name profiles. Each profile defines how a code name is
+# generated, transformed and validated. The {main} profile is required. The
+# profiles from other configuration files are generated automatically.
+# [list<object>, required]
+#
+# The {name} property defines a name of the profile. Must be unique, not empty
+# and not contain "{" nor "}" characters. The property is case-insensitive.
+# [string, required]
+#
+# The {pattern} property defines how a code name is generated. Curly brackets
+# are replaced by the values from the corresponding list of names. For example,
+# "{city}" may be replaced by "warsaw" or "chicago". [string, required]
+#
+# The {transform_case} property defines if all the letters in the code name
+# should be transformed to lowercase ("lower"), uppercase ("upper") or kept as
+# they are ("keep", default). [string, optional]
+# 
+# The {transform_space} property defines if all whitespace characters, like
+# spaces and tabulators, should be transformed into other characters or strings.
+# If property has {true} value or is empty, all whitespace characters are
+# removed. If {false} value or is not defined, whitespace characters are kept as
+# they are. [string or boolean, optional]
+#
+# The {transform_unidecode} property defines if all diacritical characters in
+# the code name should be transformed to their closest latin equivalents. For
+# example, "jaźń" would be transformed into "jazn". If there is no suitable
+# equivalent, a character is transformed into "?". The {false} value is default.
+# [boolean, optional]
+#
+# The {validation_pattern} property defines a regex pattern that must match a
+# generated and transformed code name. Otherwise, the code name will not be
+# used. When defined without "^" or "$" character, it can be used to extract a
+# matching part of the code name. The ".*" value is default and matches all the
+# code names. [string, optional]
+#
+profile:
+    -   name: "main"
+        pattern: "{color-city-short}"
+    -   name: "color-city"
+        pattern: "{color}-{city}"
+        transform_case: "lower"
+        transform_space: "-"
+        validation_pattern: "^[a-z\\-]+$"
+    -   name: "color-city-short"
+        pattern: "{color-city}"
+        validation_pattern: "^.{,20}$"
+    -   name: "adjective-dinosaur"
+        pattern: "{adjective}-{dinosaur}"
+        transform_case: "lower"
+        transform_space: "-"
+        validation_pattern: "^[a-z\\-]+$"
+    -   name: "adjective-dinosaur-short"
+        pattern: "{adjective-dinosaur}"
+        validation_pattern: "^.{,16}$"
+    -   name: "women-scientist-transformed"
+        pattern: "{women-scientist}"
+        transform_case: "lower"
+        transform_space: "-"
+        transform_unidecode: true
+        validation_pattern: "^[a-z\\-]{,20}$"

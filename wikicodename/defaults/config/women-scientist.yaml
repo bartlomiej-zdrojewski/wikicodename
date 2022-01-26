@@ -1,0 +1,9 @@
+profile:
+    transform_unidecode: true
+    validation_pattern: "^[a-zA-Z][a-zA-Z\\- ]+[a-zA-Z]"
+
+pages:
+    - "Index_of_women_scientists_articles"
+
+sources:
+    lists: true

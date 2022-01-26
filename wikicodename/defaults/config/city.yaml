@@ -1,0 +1,36 @@
+# This is a configuration file for a list of code names.
+
+# The code name profile. The properties are the same as in profiles in the main
+# configuration file, except the {pattern} property is missing and the {name}
+# property is obtained from the file name (without an extension). [object,
+# optional]
+profile:
+    transform_unidecode: true
+    validation_pattern: "^[a-zA-Z][a-zA-Z\\- ]+[a-zA-Z]"
+
+# The list of Wikipedia pages. Must not be empty. [list<string>, required]
+pages:
+    - "List_of_towns_and_cities_with_100,000_or_more_inhabitants/country:_A-B"
+    - "List_of_towns_and_cities_with_100,000_or_more_inhabitants/country:_C-D-E-F"
+    - "List_of_towns_and_cities_with_100,000_or_more_inhabitants/country:_G-H-I-J-K"
+    - "List_of_towns_and_cities_with_100,000_or_more_inhabitants/country:_L-M-N-O"
+    - "List_of_towns_and_cities_with_100,000_or_more_inhabitants/country:_P-Q-R-S"
+    - "List_of_towns_and_cities_with_100,000_or_more_inhabitants/country:_T-U-V-W-Y-Z"
+
+#
+# The definition of code name sources. [object, required]
+# 
+# The {lists} property defines if values from the bulleted and numbered lists
+# should be included in the list of code names. The {false} value is default.
+# [boolean, optional]
+#
+# The {tables} property defines the list of tables' column headers. If a table's
+# column header is the same as in the list then all the column's values are
+# included in the list of code names. [list<string>, optional]
+#
+sources:
+    lists: true
+    tables:
+        - "Name"
+        - "City"
+        - "City or town"

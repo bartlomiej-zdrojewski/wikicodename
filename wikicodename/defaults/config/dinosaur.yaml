@@ -1,0 +1,15 @@
+profile:
+    validation_pattern: "^[a-zA-Z][a-zA-Z ]+[a-zA-Z]"
+
+pages:
+    - "List_of_dinosaur_genera"
+
+excluded_sections:
+    - ""
+    - "Scope and terminology"
+    - "Notes"
+    - "See also"
+    - "References"
+
+sources:
+    lists: true

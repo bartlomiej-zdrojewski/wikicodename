@@ -1,0 +1,11 @@
+profile:
+    validation_pattern: "^[a-zA-Z][a-zA-Z\\- ]+[a-zA-Z]$"
+
+pages:
+    - "List_of_colors:_A–F"
+    - "List_of_colors:_G–M"
+    - "List_of_colors:_N–Z"
+
+sources:
+    tables:
+        - "Name"

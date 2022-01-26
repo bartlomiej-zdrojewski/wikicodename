@@ -1,0 +1,9 @@
+profile:
+    transform_unidecode: true
+    validation_pattern: "^[a-zA-Z][a-zA-Z\\.\\' ]+[a-zA-Z]$"
+
+pages:
+    - "List_of_IBA_official_cocktails"
+
+sources:
+    lists: true
