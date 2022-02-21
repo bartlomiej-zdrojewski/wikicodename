@@ -38,7 +38,7 @@ setup(
         'colorama>=0.4,<0.5',
         'lxml>=4.7,<4.8',
         'PyYAML>=6.0,<6.1',
-        'Unidecode>=1.3,<1.4'
+        'text-unidecode>=1.3,<1.4'
     ],
     entry_points={
         'console_scripts': [

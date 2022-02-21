@@ -2,8 +2,8 @@ import json
 import random
 import re
 from colorama import Fore
+from text_unidecode import unidecode
 from typing import List, Dict
-from unidecode import unidecode
 from .cache import Cache
 from .config import Config
 from .wiki_data import WikiData
