@@ -8,7 +8,7 @@ def read(file_name):
 
 setup(
     name='wikicodename',
-    version='1.0.0',
+    version='1.0.1',
     author='Bartłomiej Zdrojewski',
     author_email='bartlomiej.zdrojewski@gmail.com',
     url='https://github.com/bartlomiej-zdrojewski/wikicodename',
