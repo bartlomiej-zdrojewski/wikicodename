@@ -10,9 +10,6 @@ Use [pip](https://pip.pypa.io/en/stable/) to install the application.
 pip install wikicodename
 ```
 
-**Warning!** On Windows you may need to set the `PYTHONUTF8` environmental
-variable to `1` for the application to work properly.
-
 ## Usage
 
 Use `wikicodename` command to generate a list of code names for the default

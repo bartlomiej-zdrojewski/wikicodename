@@ -53,7 +53,7 @@ class Config:
 
     def __load_file(self, file_path: str) -> dict:
         try:
-            file = open(file_path, 'r')
+            file = open(file_path, 'r', encoding='utf8')
             data = yaml.load(file, Loader=yaml.SafeLoader)
             file.close()
             if not isinstance(data, dict):
