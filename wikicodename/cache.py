@@ -31,7 +31,7 @@ class Cache:
         data = None
         file_path = self.__get_file_path(id)
         try:
-            file = open(file_path, 'r')
+            file = open(file_path, 'r', encoding='utf8')
             data = file.read()
             file.close()
         except FileNotFoundError:
@@ -44,7 +44,7 @@ class Cache:
     def write(self, id: str, data: str):
         file_path = self.__get_file_path(id)
         try:
-            file = open(file_path, 'w')
+            file = open(file_path, 'w', encoding='utf8')
             file.write(data)
             file.close()
         except OSError as e:
